@@ -1,7 +1,30 @@
 Rails.application.routes.draw do
   devise_for :users
-  get '/' => 'home#index'
+  get '/' => 'groups#index'
   get '/groups' => 'groups#index'
+  get '/groups/new' => 'groups#new'
+  post '/groups' => 'groups#create'
+  get '/groups/:id' => 'groups#show'
+  get '/groups/:id/edit' => 'groups#edit'
+  patch '/groups/:id' => 'groups#update'
+  delete '/groups/:id' => 'groups#destroy'
+
+  get '/events' => 'events#index'
+  get '/events/new' => 'events#new'
+  post '/events' => 'events#create'
+  get '/events/:id' => 'events#show'
+  get '/events/:id/edit' => 'events#edit'
+  patch '/events/:id' => 'events#update'
+  delete '/events/:id' => 'events#destroy'
+
+  get '/fields' => 'fields#index'
+  get '/fields/new' => 'fields#new'
+  post '/fields' => 'fields#create'
+  get '/fields/:id' => 'fields#show'
+  get '/fields/:id/edit' => 'fields#edit'
+  patch '/fields/:id' => 'fields#update'
+  delete '/fields/:id' => 'fields#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
