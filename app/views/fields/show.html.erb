@@ -1,0 +1,5 @@
+<h3>History of field conditions:</h3>
+<% @field.field_conditions.each do |field_condition| %>
+  <p><%= field_condition.condition %></p>
+  <p>&nbsp</p>
+<% end %>
