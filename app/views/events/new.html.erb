@@ -1,0 +1,61 @@
+<%= form_tag '/events', method: :post do %>
+  <div class="form-group">
+    <%= label_tag :name %>
+    <%= text_field_tag :name, @event.name %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :event_type %>
+    <%= text_field_tag :event_type, @event.event_type %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :date_start %>
+
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-6'>
+                <div class="form-group">
+                    <div class='input-group date' id='datepicker' data-provide="datepicker">
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+              $(function () {
+                $('#datepicker').datepicker({
+                  viewMode: 'years'
+                });
+              });
+            </script>
+        </div>
+    </div>
+  </div>
+  <div>
+    <input type="date">
+  </div>
+  <div class="form-group">
+    <%= label_tag :date_stop %>
+    <%= text_field_tag :date_stop, @event.date_stop %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :time_start %>
+    <%= text_field_tag :time_start, @event.time_start %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :time_stop %>
+    <%= text_field_tag :time_stop, @event.time_stop %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :description %>
+    <%= text_field_tag :description, @event.description %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :field_id %>
+    <%= text_field_tag :field_id, @event.field_id %>
+  </div>
+  <div>
+    <%= button_tag 'Submit', class: "btn btn-default" %>
+  </div>
+<% end %>
