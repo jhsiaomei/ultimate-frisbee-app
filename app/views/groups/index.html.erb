@@ -1,3 +1,15 @@
-index.html.erb
+<h2>Full List of Groups:</h2>
 
-<%= link_to "Sign Out", "/users/sign_out", method: :delete %>
+<% @groups.each do |group| %>
+  <p><%= group.name %></p>
+  <p><%= group.group_type %></p>
+  <p><%= group.description %></p>
+  <p><%= group.field_id_1 %></p>
+  <p><%= group.field_id_2 %></p>
+  <p><%= group.field_id_3 %></p>
+  <hr>
+<% end %>
+
+<div><%= link_to "Add New Group", "/groups/new", method: :get %></div>
+
+<div><%= link_to "Sign Out", "/users/sign_out", method: :delete %></div>
