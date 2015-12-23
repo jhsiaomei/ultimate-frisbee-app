@@ -10,6 +10,11 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require theme/bootstrap-theme
+ *= require theme/bootstrap
+ *= require theme/animate
+ *= require theme/style
+ *= require theme/font-awesome
  *= require_tree .
  *= require_self
  */
