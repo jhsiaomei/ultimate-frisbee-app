@@ -13,4 +13,9 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require theme/classie
+//= require theme/jquery.min
+//= require theme/landing
+//= require theme/parallax.min
+//= require theme/wow.min
 //= require_tree .
